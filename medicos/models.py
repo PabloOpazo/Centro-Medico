@@ -16,7 +16,7 @@ class Medico(models.Model):
     email = models.EmailField(verbose_name="Email")
     RUT = models.CharField(verbose_name="RUT", max_length=200)
     chilean_phone_regex = RegexValidator(
-    regex=r'^\+\d{2} \d{4} \d{4}$',
+    regex=r'^\+\d{3} \d{4} \d{4}$',
     message="El número debe estar en el formato: '+569 1234 5678'.")
     telefone = models.CharField(
         verbose_name="Teléfono",

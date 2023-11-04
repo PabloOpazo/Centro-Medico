@@ -15,7 +15,7 @@ class Cliente(models.Model):
     sexo = models.CharField(max_length=9, choices=SEXO,)
     
     chilean_phone_regex = RegexValidator(
-    regex=r'^\+\d{2} \d{4} \d{4}$',
+    regex=r'^\+\d{3} \d{4} \d{4}$',
     message="El número debe estar en el formato: '+569 1234 5678'.")
     telefone = models.CharField(
         verbose_name="Teléfono",

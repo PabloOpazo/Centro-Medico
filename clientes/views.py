@@ -55,7 +55,7 @@ class ConsultaCreateView(LoginRequiredMixin, CreateView):
                 messages.warning(self.request, 'No puedes hacer esta cita')
                 return HttpResponseRedirect(reverse_lazy('clientes:consulta_create'))
         except Cliente.DoesNotExist:
-            messages.warning(self.request, 'Completa tu registro')
+            messages.warning(self.request, 'Necesitamos datos adicionales para tu registro')
             return HttpResponseRedirect(reverse_lazy('clientes:cliente_cadastro'))
         messages.info(self.request, 'Cita programada exitosamente!')
         return HttpResponseRedirect(reverse_lazy('clientes:consulta_list'))
