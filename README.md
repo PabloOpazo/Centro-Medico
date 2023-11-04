@@ -1,55 +1,44 @@
-## Projeto de Clinica para Programação p/ Internet 2
+## Proyecto Centro-Medico
 
-No que consite este projeto:
-- Administrar medicos e especialidade e agendas
-- Criar uma agenda para disponibilizar as consultas
-- Permitir o usuario escolher um consulta em dia e horario de acordo com agenda do medico.
+## Configuracion de ambiente de trabajo:
 
-## Configurando o ambiente para executar a aplicação web.
-Faça o download deste repositorio:
+## Repositorio https://github.com/PabloOpazo/Centro-Medico.git
 
+Crea una máquina virtual e instala las bibliotecas disponibles en el archivo requirementes.txt:
+Ingresa a la carpeta creada y activa un entorno virtual:
 ```
-$ git clone git@github.com:Dan-Source/projeto_clinica.git
+$ cd centro-medico
+$ python -m venv venv
 ```
-
-Crie um maquina virtual e instale a bibliotecas disponiveis no 
-arquivo requirementes.txt:
-
-Entre na pasta criada e inicie um ambiente virtual:
-```
-$ cd projeto_clinica
-$ python3 -m venv venv
-```
-Depois voce deve ativa-lo com o seguinte comando:
+Luego debes activarlo con el siguiente comando:
 
 ```
 $ source ./venv/bin/activate
 ```
-Apos ativado, instale as bibliotecas necessárias para executar o projeto:
+Después de activarlo, instala las bibliotecas necesarias para ejecutar el proyecto:
 ```
  (venv)$ pip install -r requirements.txt
 ```
-Para poder ter o primeiro acesso e pode configurar o aplicação vamos executar o comando 
-'migrate' para gerar o banco de dados padrão do Django(SQLite). E depois criar o superusuario:
+Para tener el primer acceso y configurar la aplicación, ejecuta el comando 'migrate' para generar la base de datos predeterminada de Django (SQLite). Luego, crea el superusuario:
 ```
 (venv)$ ./manage.py migrate
 (venv)$ ./manage.py createsuperuser
-Apelido/Usuário: admin
+Apellido/Usuario: admin
 E-mail: admin@mail.com
 Password: 
 Password (again):
 ```
 
 
-Para iniciar el servidor después de este paso debes:
+Para iniciar el servidor debes ingresar:
 ```
 (venv)$ ./manage.py runserver
 ```
 
 
-Para visualizar se tudo esta executando como esperado vamos acessar o seguinte endereço:
+Para verificar si todo está funcionando como se espera, accede a la siguiente dirección:
 [http://localhost:8000/](http://localhost:8000/)
 
-Ou você pode ter acesso a admin do Django:
+Vista administrador
 [http://localhost:8000/admin](http://localhost:8000/admin)
 

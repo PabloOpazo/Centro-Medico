@@ -14,14 +14,16 @@ class Cliente(models.Model):
     
     sexo = models.CharField(max_length=9, choices=SEXO,)
     
-    phone_regex = RegexValidator(
-        regex = r'^\+\d{3} \d{8}$',
-        message="El número debe estar en este formato: \
-                        '+999 99999999'.")
-
-    telefone = models.CharField(verbose_name="Teléfono",
-                                validators=[phone_regex],
-                                max_length=17, null=True, blank=True)
+    chilean_phone_regex = RegexValidator(
+    regex=r'^\+\d{2} \d{4} \d{4}$',
+    message="El número debe estar en el formato: '+569 1234 5678'.")
+    telefone = models.CharField(
+        verbose_name="Teléfono",
+        validators=[chilean_phone_regex],
+        max_length=15,  # Ajusta la longitud máxima para el formato chileno
+        null=True,
+        blank=True
+    )
     RUT = models.CharField(max_length=12, )
     
     user = models.OneToOneField(
