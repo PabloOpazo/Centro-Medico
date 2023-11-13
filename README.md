@@ -1,4 +1,5 @@
 ## Repositorio https://github.com/PabloOpazo/Centro-Medico.git
+```
  pip install -r requirements.txt
 ```
 Para tener el primer acceso y configurar la aplicación, ejecuta el comando 'migrate' para generar la base de datos predeterminada de Django (SQLite). Luego, crea el superusuario:
